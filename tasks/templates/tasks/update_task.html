@@ -1,0 +1,13 @@
+<h2>Update Task</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" value="{{ task.title }}">
+    
+    <label>
+        Completed:
+        <input type="checkbox" name="completed" {% if task.completed %}checked{% endif %}>
+    </label>
+
+    <button type="submit">Update</button>
+</form>

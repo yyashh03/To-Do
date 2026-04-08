@@ -1,0 +1,13 @@
+<h2>Completed Tasks</h2>
+
+<ul>
+{% for task in tasks %}
+    <li>
+        {{ task.title }} - {{ task.due_date }}
+    </li>
+{% empty %}
+    <p>No completed tasks yet.</p>
+{% endfor %}
+</ul>
+
+<a href="/">Back</a>
